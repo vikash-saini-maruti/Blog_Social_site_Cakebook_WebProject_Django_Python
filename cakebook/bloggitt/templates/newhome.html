@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% block title %} Bloggit {% endblock title %} 
+
+{% block content %}
+  {% include "header.html" %}
+  {% include "description.html" %}
+
+  <div class="blogs">
+    {% for post in posts %}
+      <article class="blog">
+        <h3 class="title">{{ post.title }}</h3>
+        <p class="author">{{ post.author.username }} | {{ post.created_on|date:"F d, Y H:i" }}</p>
+        <p class="post">{{ post.content|truncatechars:200 }}...</p>
+        <a class="button" href="{% url 'post_detail' post.slug %}">Read More →</a>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="pagination">
+    <ul>
+      {% if posts.has_previous %}
+        <li><a class="pagination-btn" href="?page={{ posts.previous_page_number }}">«</a></li>
+      {% endif %}
+      <li class="text">{{ posts.number }}</li>
+      {% if posts.has_next %}
+        <li><a class="pagination-btn" href="?page={{ posts.next_page_number }}">»</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+{% endblock content %}

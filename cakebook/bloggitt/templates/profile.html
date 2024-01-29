@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include "header.html" %} 
+<style>
+  .profile-container .profile {
+    display: grid;
+    width: 500px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 25% 75%;
+    color: #48556a;
+    font-weight: 800;
+    border: 15px solid #160c58;
+    padding: 25px; 
+}
+.profile-container .profile img {
+  grid-row: 1/3;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  margin-top: 0.7rem;
+  user-select: none;
+}
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    background-color: #180e5c;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+  .my-form-elements {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 217px;
+    height: 38px;
+  
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button {
+  border-radius: 122px;
+  margin-bottom: 10px; /* Add some margin between buttons */
+
+}
+
+
+</style>
+<script>
+  $(document).ready(function() {
+    $(".show-reply-form").click(function() {
+      // Toggle the visibility of the reply form
+      $(this).siblings(".reply-form").toggle();
+    });
+  });
+</script>
+    <div class="profile-container">
+        <div class="profile" >
+          <img src="{{user.profile.profile_image.url}}" alt="">
+          <h2 style="margin-left: 20px;margin-top: 20px;">@  {{user.username}}</h2>
+          <p style="margin-left: 20px;"># {{user.email}}</p>
+        </div>
+        <p class="title">Status : <br>Whisking up some sweet moments on Cakebook! #BakingMemories 🍰✨</p>
+        
+        <div class="button-container">
+          <!-- Left buttons -->
+
+
+          <div>
+            <a href="{% url 'profile-update' %}" class="button"  style="border-radius: 122px">Update Profile</a><br>
+            <a href="{% url 'favorites' %}" class="button"style="border-radius: 122px">Your Favorites</a><br>
+            <a href="#" id="openForm" class="button"style="border-radius: 122px">Suggest a Feature</a>
+          </div>
+      
+          <!-- Right buttons -->
+          <div>
+            <a href="{% url 'logout' %}" class="button"style="border-radius: 122px">Switch Account</a><br>
+            <a href="{% url 'logout' %}" class="button"style="border-radius: 122px">Logout Account</a><br>
+            <a href="{% url 'home' %}" class="button"style="border-radius: 122px">Back to Home</a>
+          </div>
+        </div>
+        <div id="suggestionForm" class="comment-form" style="display: none;">
+          <form id="suggestionFormContent" class="comment-form reply-form">
+            <label for="name" >Name:</label>
+            <input type="text" id="name" name="name" required style="width: 180px;height: 22px;"><br>
+        
+            <label for="email" >Email Address:</label>
+            <input type="email" id="email" name="email" required style="width: 180px;height: 22px;"><br>
+            
+            <label for="contactNo">Contact No (optional):</label>
+            <input type="text" id="contactNo" name="contactNo" style="width: 180px;height: 22px;"><br>
+        
+            <label for="suggestion" >Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" required style="width: 310px;height: 80px;"></textarea><br>
+        
+    
+            <button type="button" onclick="submitForm()" style="width: 80px;height: 22px;">Submit</button>
+          </div>
+          <br>
+          </form>
+        
+        
+        <!--
+                  <a href="{% url 'profile-update' %}" class="button">Update Profile</a><br><br>
+        <a href="{% url 'favorites' %}" class="button">Your Favorites</a><br><br>
+        <a href="#" id="openForm" class="button">Suggest a Feature</a><br><br>
+        
+    
+
+
+        <a href="{% url 'logout' %}" class="button">Switch Account</a><br><br>
+        <a href="{% url 'logout' %}" class="button">Logout Account</a><br><br>
+        
+        <a href="{% url 'home' %}" class="button">Back to Home</a><br><br>
+        
+
+    </div>
+    -->
+
+
+
+      <script>
+        // Function to open the suggestion form
+        document.getElementById('openForm').addEventListener('click', function() {
+          document.getElementById('suggestionForm').style.display = 'block';
+        });
+      
+        // Function to submit the form and show the alert
+        function submitForm() {
+          // Perform form validation if needed
+      
+          // Assuming the form is valid, show the alert
+          alert('Thank you! Your form has been submitted successfully. We will work on your suggestion.');
+      
+          // Optionally, reset the form and hide it after submission
+          document.getElementById('suggestionFormContent').reset();
+          document.getElementById('suggestionForm').style.display = 'none';
+        }
+      </script>
+      
+{% endblock content %}

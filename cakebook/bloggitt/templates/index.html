@@ -1,0 +1,303 @@
+{% include "header.html" %} 
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'theme/image/favicon.png' %}" type="">
+
+  <title> Cakebook </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+
+</head>
+<style>
+  /* Your existing body CSS rules here */
+
+  /* New CSS rules specific to the blog site */
+  @media (max-width: 992px)
+.slider_section {
+    padding: 0px 0 75px 0;
+}
+  body {
+    background-color: #ffffff; /* Ocean Blue */
+    color: #fff; /* White text */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .blog {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+
+
+      
+      background-color: #22196d; /* Sky Blue */
+      margin: 30px 0;
+      padding: 21px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.5s ease-in-out;
+      min-height: 295px;
+      margin-left: 100px;
+      margin-right: 100px;
+
+    }
+
+    h3.title {
+      color: #fff; /* White text */
+      margin-bottom: 10px;
+    }
+
+    p.author {
+      color: #ecf0f1; /* Light Gray */
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    p.post {
+      color: #ecf0f1; /* Light Gray */
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    a.button {
+      color: #fff; /* White text */
+      text-decoration: none;
+      background-color: #2ecc71; /* Emerald Green */
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    a.button:hover {
+      background-color: #27ae60; /* Darker Green on hover */
+    }
+
+    nav.pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    li {
+      margin: 0 5px;
+    }
+
+    button.pagination-btn {
+      color: #fff; /* White text */
+      background-color: #2980b9; /* Midnight Blue */
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button.pagination-btn:hover {
+      background-color: #21618c; /* Darker Blue on hover */
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{% static 'theme/image/hero-bg.png' %}" alt="" style="width: 10px; height: 10px;">
+      </div>
+    </div>
+
+    <section class="slider_section">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- Content for Slide 1 -->
+                  <div class="detail-box">
+                    <h1>Cakebook : <br></h1>
+                    <h3 style="color: white; margin: 0; display: inline;">Where Every Slice Tells</h3><br>
+                    <h3 style="color: white;">A Sweet Story!</h3><br>
+                    <p>
+                      Welcome to Cakebook, the sweetest spot on the internet!<br> Here, everyone is invited to join our delightful platform and share their blogs & stories, whether it's about tech, health, food, or just their everyday thoughts on the world – from politics to economics. It's like a magical mix of social media and a cozy blog corner. Feel free to spread the sweetness with your friends, sprinkle some likes, and add a cherry on top with your comments! Let's create a world where sharing is as easy as taking a bite of your favorite cake. 🌈✨ #CakebookAdventures
+                    </p>
+                    <div class="btn-box">
+                      <a href="#customCarousel1" class="btn1" data-slide="next">
+                        Next >>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!-- Image for Slide 1 -->
+                  <div class="img-box">
+                    <img src="{% static 'theme/image/slider-img.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- Content for Slide 2 -->
+                  <div class="detail-box">
+                    <h1>We believe in <br> the joy of sharing</h1>
+                    <p>
+                      
+Cakebook is more than just a social platform; it's a delightful space where sharing feels as effortless as savoring a delicious cake. Whether your passion is in technology, health, food, or everyday adventures, Cakebook invites you to contribute to our warm and inviting community. Connect with friends, sprinkle likes generously, and add the perfect cherry on top with thoughtful comments. Let's build a global celebration of stories, creating a flavorful and enjoyable internet where every interaction adds a layer of sweetness to our collective narrative. Join Cakebook and indulge in the pleasure of connection, making sharing as easy as taking a bite of the most scrumptious cake!
+                    </p>
+                    <div class="btn-box">
+                      <a href="#customCarousel1" class="btn1" data-slide="prev">
+                        Previous
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!-- Image for Slide 2 -->
+                  <div class="img-box">
+                    <img src="{% static 'theme/image/about-img.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Navigation Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+        </ol>
+        <!-- Navigation Buttons -->
+        <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+  </div>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script type="text/javascript" src="{% static 'theme/js/bootstrap.js' %}"></script>
+   
+    <script type="text/javascript" src="{% static 'theme/js/custom.js' %}"></script>
+<div class="blogs">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+
+  getPosts();
+  function getPosts(page = 1){
+    $.ajax({
+      type: "POST",
+      url: "/fetch",
+      data: {
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        page: page,
+      },
+      success: (data) => {
+        page = JSON.parse(data.post_list);
+        $(".blogs").empty();
+        $(".pagination").remove();
+        for (let post of page.posts){
+          let blog = $("<article></article>").addClass("blog");
+          blog.append($("<h3></h3").addClass("title").text(post.title));
+          blog.append($("<p></p>").addClass("author").text(`${post.author} | ${new Date(post.created_on).toLocaleString()}`));
+          blog.append($("<p></p>").addClass("post").text(`${post.content.slice(0,500)}...`));
+          blog.append($("<a></a>").addClass("button").text("Read More  →").attr("href", `/detail/${post.slug}`));
+          $(".blogs").append(blog);
+        }
+        if (page.has_previous || page.has_next){
+          let nav = $("<nav></nav>").addClass("pagination");
+          let ul = $("<ul></ul>")
+          nav.append(ul);
+          if (page.has_previous){
+            ul.append($("<li></li>").append($("<button></button>").addClass("pagination-btn").attr("id", "prev-btn").text("«")));
+          }
+          ul.append($("<li></li>").addClass("text").text(page.number));
+          if (page.has_next){
+            ul.append($("<li></li>").append($("<button></button>").addClass("pagination-btn").attr("id", "next-btn").text("»")));
+          }
+          $(".blogs").after(nav);
+          $("#next-btn").on("click", function(){
+            getPosts(parseInt($(".text").text()) + 1)
+          })
+          $("#prev-btn").on("click", function(){
+            getPosts(parseInt($(".text").text()) - 1)
+          })
+        }
+      }
+    })
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% include "footer.html" %} 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

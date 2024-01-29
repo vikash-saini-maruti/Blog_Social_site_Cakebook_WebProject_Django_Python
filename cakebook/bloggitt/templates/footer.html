@@ -1,0 +1,136 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'theme/css/bootstrap.css' %}" />
+<link href="{% static 'theme/css/font-awesome.min.css' %}" rel="stylesheet" />
+<link href="{% static 'theme/css/style.css' %}" rel="stylesheet" />
+<link href="{% static 'theme/css/responsive.css' %}" rel="stylesheet" />
+<section class="info_section layout_padding2" style="background-color: #110850;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href=""onclick="showAlert('Google-Maps')">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="" onclick="showAlert('Phone contacts')">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="" onclick="showAlert('Email-Address')">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="#" onclick="showAlert('Facebook')">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" onclick="showAlert('Twitter')">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" onclick="showAlert('LinkedIn')">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#" onclick="showAlert('Instagram')">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+                Disclaimer
+            </h4>
+            <p>
+                Cakebook is a project created for demonstration and project purposes by Vikash Saini. It is not currently a live service. All images, designs, themes, and content on this website are copyrighted by Cakebook. Permission is required for any use or reproduction.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="{% url 'home' %}">
+                Home
+              </a>
+              <a class="" href="{% url 'about' %}">
+                About
+              </a>
+              <a class="" href="{% url 'Services' %}">
+                Services
+              </a>
+              <a class="" href="{% url 'Why_us' %}">
+                Why Us
+              </a>
+              <a class="" href="{% url 'Trading' %}">
+                Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+            <h4>
+              Subscribe
+            </h4>
+            <form id="subscribeForm">
+              <input type="text" id="emailInput" placeholder="Enter email" />
+              <button type="submit" onclick="subscribe()">
+                Subscribe
+              </button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#" onclick="showAlert('Cakebook')">Cakebook</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    function subscribe() {
+      var email = document.getElementById("emailInput").value;
+      
+      // Check if the email is not empty
+      if (email.trim() !== "") {
+        // Display a professionally worded thank you message
+        alert("Thank you for subscribing! We appreciate your interest. Expect to hear from us soon at your provided email address.");
+        
+        // Optionally, you can reset the form after submission
+        document.getElementById("subscribeForm").reset();
+      } else {
+        // Display alert if the email is empty
+        alert("Please enter a valid email address.");
+      }
+      
+      // Prevent the default form submission
+      return false;
+    }
+
+    function showAlert(socialMedia) {
+        alert("Cakebook is currently under development and not yet live. However, thank you for expressing interest and for choosing to follow us on " + socialMedia + ".");
+
+
+      }
+  </script>

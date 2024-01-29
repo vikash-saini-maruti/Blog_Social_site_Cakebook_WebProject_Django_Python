@@ -1,0 +1,189 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="{% static 'theme/image/favicon.png' %}" type="">
+      
+        <title> Cakebook </title>
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+      
+        <!--owl slider stylesheet -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      
+        <!-- font awesome style -->
+        
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+      
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        
+      
+      </head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{% static 'theme/image/hero-bg.png' %}" alt="">
+      </div>
+    </div>
+    <!-- header section strats -->
+    <!-- end header section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'theme/image/1.svg' %}" alt="SVG Image"style="width: 150px; height: 150px;">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Sweet Storytelling Platform
+                </h5>
+                <p>
+                  Dive into our enchanting social site where you can share your tales, experiences, and insights with the world. Craft your own narrative and let your voice resonate in the community.
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'theme/image/2.svg' %}" alt="SVG Image"style="width: 150px; height: 150px;">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Connecting Sweet Souls
+                </h5>
+                <p>
+                  Connect with friends, like-minded individuals, and fellow enthusiasts. Cakebook is a place where bonds are formed, and friendships are sweetened through shared interests and meaningful conversations.
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'theme/image/3.svg' %}" alt="SVG Image"style="width: 150px; height: 150px;">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Safe and Supportive Environment
+                </h5>
+                <p>
+                  Enjoy a secure and supportive online space. Cakebook is committed to fostering a positive atmosphere where everyone feels comfortable sharing their stories without fear.
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-5 ">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'theme/image/4.svg' %}" alt="SVG Image"style="width: 150px; height: 150px;">>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Diverse Layers of Content: 
+              </h5>
+              <p>
+                Explore a variety of content layers on Cakebook, from tech updates and health tips to culinary adventures and reflections on the world. Our diverse range of topics ensures there's something sweet for everyone.
+              </p>
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-5 ">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'theme/image/5.svg' %}" alt="SVG Image"style="width: 150px; height: 150px;">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Sprinkle Likes and Add Cherries with comments: 
+            </h5>
+            <p>
+              Sprinkle likes on posts that resonate, celebrating the sweetness. Don't stop there – add the perfect cherry with thoughtful comments. Engage, share insights, and build a community where every like and comment adds richness to delightful discussions. Let's create a platform as sweet as the most perfectly frosted cake! 🍰✨🎉
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+      </div>
+        <div class="btn-box">
+          <a href="{% url 'home' %}">
+            Goto Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+{% include "footer.html" %} 
+</html>
